@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 pages = new String[information.maxPage];
                 for (int i = 0;i<pages.length;i++)
                 {
-                    pages[i] = "Page: " + (i+1);
+                    pages[i] = " " + (i+1);
                     ;
                     spinner.setAdapter(new ArrayAdapter<String >(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, pages));
                 }
@@ -145,12 +145,12 @@ class CustomIconLabelAdapter extends ArrayAdapter<String> {
         this.icons = getRandomFace(faces, n);
 //        maxPage = (int) Math.ceil(n/m);
         count = n;
-        maxPage = 0;
-        while(n>0)
+        maxPage = 1 + n/m;
+        /*while(n>0)
         {
             n-=m;
             maxPage++;
-        }
+        }*/
         this.lineInPage = m;
     }
 

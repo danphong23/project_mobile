@@ -25,6 +25,7 @@
             android:layout_height="50dp"
             android:background="@drawable/style_edt"
             android:padding="10dp"/>
+        <requestFocus/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
             android:layout_height="50dp"
             android:layout_gravity="end"
             android:layout_weight="1"
-            android:background="@drawable/style_edt" />
+            android:background="@drawable/style_edt2" />
 
     </LinearLayout>
 
