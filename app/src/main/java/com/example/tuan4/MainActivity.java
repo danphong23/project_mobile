@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //        , phones, icons);
 //        information.getView()
         txtMsg = (TextView) findViewById(R.id.txtMsg);
+        txtMsg.setText("Please generate list");
 
 //khi người dùng nhấn vào item list view
         myListView = (ListView) findViewById(R.id.my_list);
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onItemClick(AdapterView<?> av, View v, int position, long id) {
                 int i = information.getPosition(position);
                 if(i>= information.count) return;
-                txtMsg.setText("you choose: " + information.names[i]);
+                txtMsg.setText("You choose: " + information.names[i]);
             }
         });
 
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     ;
                     spinner.setAdapter(new ArrayAdapter<String >(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, pages));
                 }
+                txtMsg.setText("Now you can choose a line");
             }
         });
 
